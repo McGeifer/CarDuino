@@ -1,0 +1,669 @@
+EESchema Schematic File Version 4
+LIBS:CarDuino-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L teensy:Teensy3.5 U?
+U 1 1 5D1B0B38
+P 14750 3550
+F 0 "U?" H 14750 6027 60  0000 C CNN
+F 1 "Teensy3.5" H 14750 5921 60  0000 C CNN
+F 2 "" H 14650 5750 60  0000 C CNN
+F 3 "" H 14750 5850 60  0000 C CNN
+F 4 "https://www.pjrc.com/teensy/pinout.html" H 14750 5823 50  0000 C CNN "Pinouts"
+	1    14750 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K?
+U 1 1 5D1B4FC2
+P 14450 -800
+F 0 "K?" H 14880 -754 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 14880 -845 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 14900 -850 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14450 -800 50  0001 C CNN
+	1    14450 -800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K?
+U 1 1 5D1B592D
+P 14450 150
+F 0 "K?" H 14880 196 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 14880 105 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 14900 100 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14450 150 50  0001 C CNN
+	1    14450 150 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K?
+U 1 1 5D1B6B79
+P 14000 6700
+F 0 "K?" H 14430 6746 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 14430 6655 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 14450 6650 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14000 6700 50  0001 C CNN
+	1    14000 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C K?
+U 1 1 5D1B79C1
+P 14600 7350
+F 0 "K?" H 15030 7396 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 15030 7305 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 15050 7300 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14600 7350 50  0001 C CNN
+	1    14600 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 5D1D05AA
+P 13050 150
+F 0 "J?" H 13158 431 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 13158 340 50  0000 C CNN
+F 2 "" H 13050 150 50  0001 C CNN
+F 3 "~" H 13050 150 50  0001 C CNN
+	1    13050 150 
+	1    0    0    -1  
+$EndComp
+$Comp
+L CarDuino:AZDelivery_ACS712 U?
+U 1 1 5D1DB42C
+P 8750 4250
+F 0 "U?" H 8750 3935 50  0000 C CNN
+F 1 "AZDelivery_ACS712" H 8750 4026 50  0000 C CNN
+F 2 "" H 8750 4500 50  0001 C CNN
+F 3 "" H 8750 4500 50  0001 C CNN
+	1    8750 4250
+	-1   0    0    1   
+$EndComp
+Text GLabel 1000 1000 0    50   Input ~ 0
++12V
+Text GLabel 1000 1200 0    50   Input ~ 0
+ACC
+Text GLabel 1000 6000 0    50   Input ~ 0
+0V
+Wire Wire Line
+	1000 1200 1100 1200
+$Comp
+L relay-2x:RELAY-2X K1
+U 1 1 5D1FCD1F
+P 1850 5000
+F 0 "K1" H 1728 5055 30  0000 L CNN
+F 1 "RELAY-2X" H 1728 4995 30  0000 L CNN
+F 2 "" H 1850 5000 60  0000 C CNN
+F 3 "" H 1850 5000 60  0000 C CNN
+	1    1850 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L relay-2x:RELAY-2X K1
+U 2 1 5D200078
+P 2100 2400
+F 0 "K1" H 2466 2480 30  0000 L CNN
+F 1 "RELAY-2X" H 2466 2420 30  0000 L CNN
+F 2 "" H 2100 2400 60  0000 C CNN
+F 3 "" H 2100 2400 60  0000 C CNN
+	2    2100 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L relay-2x:RELAY-2X K2
+U 2 1 5D201EDC
+P 2600 2400
+F 0 "K2" H 2966 2480 30  0000 L CNN
+F 1 "RELAY-2X" H 2966 2420 30  0000 L CNN
+F 2 "" H 2600 2400 60  0000 C CNN
+F 3 "" H 2600 2400 60  0000 C CNN
+	2    2600 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L relay-2x:RELAY-2X K3
+U 2 1 5D203A4A
+P 2100 3850
+F 0 "K3" H 2466 3930 30  0000 L CNN
+F 1 "RELAY-2X" H 2466 3870 30  0000 L CNN
+F 2 "" H 2100 3850 60  0000 C CNN
+F 3 "" H 2100 3850 60  0000 C CNN
+	2    2100 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CarDuino:tinxi_5A_75W_DC_DC_Step_down_Converter U?
+U 1 1 5D209F1C
+P 2750 5000
+F 0 "U?" H 2750 5365 50  0000 C CNN
+F 1 "tinxi_5A_75W" H 2750 5274 50  0000 C CNN
+F 2 "" H 2750 5500 50  0001 C CNN
+F 3 "" H 2750 5500 50  0001 C CNN
+	1    2750 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 6000 1500 6000
+Wire Wire Line
+	1500 5200 1500 6000
+Connection ~ 1500 6000
+Wire Wire Line
+	1500 6000 2250 6000
+Wire Wire Line
+	2250 2550 2250 2750
+Wire Wire Line
+	2250 1950 2750 1950
+Wire Wire Line
+	2750 1950 2750 2150
+Wire Wire Line
+	2250 1950 2250 2150
+Wire Wire Line
+	2750 2550 2750 2750
+Wire Wire Line
+	2250 5100 2250 6000
+$Comp
+L relay-2x:RELAY-2X K2
+U 1 1 5D220390
+P 4100 5000
+F 0 "K2" H 3978 5055 30  0000 L CNN
+F 1 "RELAY-2X" H 3978 4995 30  0000 L CNN
+F 2 "" H 4100 5000 60  0000 C CNN
+F 3 "" H 4100 5000 60  0000 C CNN
+	1    4100 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5200 3750 6000
+Text GLabel 10250 1000 2    50   Input ~ 0
++12V
+Text GLabel 10250 1200 2    50   Input ~ 0
+ACC
+Text Label 3250 4900 0    50   ~ 0
++5V
+Wire Wire Line
+	4250 4450 4250 6000
+$Comp
+L relay-2x:RELAY-2X K3
+U 1 1 5D22DF52
+P 5100 5000
+F 0 "K3" H 4978 5055 30  0000 L CNN
+F 1 "RELAY-2X" H 4978 4995 30  0000 L CNN
+F 2 "" H 5100 5000 60  0000 C CNN
+F 3 "" H 5100 5000 60  0000 C CNN
+	1    5100 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L relay-2x:RELAY-2X K4
+U 1 1 5D22FBD2
+P 6100 5000
+F 0 "K4" H 5978 5055 30  0000 L CNN
+F 1 "RELAY-2X" H 5978 4995 30  0000 L CNN
+F 2 "" H 6100 5000 60  0000 C CNN
+F 3 "" H 6100 5000 60  0000 C CNN
+	1    6100 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 5200 5750 6000
+Wire Wire Line
+	3250 5100 3250 6000
+Wire Wire Line
+	2250 5100 2450 5100
+Wire Wire Line
+	2250 4900 2450 4900
+Wire Wire Line
+	2250 2750 2750 2750
+Wire Wire Line
+	2250 4000 2250 4900
+Wire Wire Line
+	2250 2750 2250 3450
+Wire Wire Line
+	2250 3450 2400 3450
+Wire Wire Line
+	2400 3450 2400 3600
+Connection ~ 2250 2750
+$Comp
+L CarDuino:Joying U?
+U 1 1 5D242C5F
+P 9700 5000
+F 0 "U?" H 10228 5046 50  0000 L CNN
+F 1 "Joying" H 10228 4955 50  0000 L CNN
+F 2 "" H 9700 5550 50  0001 C CNN
+F 3 "" H 9700 5550 50  0001 C CNN
+	1    9700 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 5450 9300 6000
+Wire Wire Line
+	9300 4300 9100 4300
+Wire Wire Line
+	9100 4200 9300 4200
+$Comp
+L relay-2x:RELAY-2X K?
+U 2 1 5D260317
+P 9600 2400
+F 0 "K?" H 9966 2480 30  0000 L CNN
+F 1 "RELAY-2X" H 9966 2420 30  0000 L CNN
+F 2 "" H 9600 2400 60  0000 C CNN
+F 3 "" H 9600 2400 60  0000 C CNN
+	2    9600 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 2550 9750 2850
+Wire Wire Line
+	9750 2850 9400 2850
+Wire Wire Line
+	9400 2850 9400 4550
+Text GLabel 10300 6000 2    50   Input ~ 0
+0V
+Connection ~ 2250 6000
+Connection ~ 4250 6000
+Connection ~ 4750 6000
+Wire Wire Line
+	4250 6000 4750 6000
+Wire Wire Line
+	2250 6000 3250 6000
+Wire Wire Line
+	5750 4600 4850 4600
+Wire Wire Line
+	4750 5200 4750 6000
+Wire Wire Line
+	4750 4750 4750 4450
+Wire Wire Line
+	5050 3500 5050 3550
+$Comp
+L Connector:Conn_01x06_Female J?
+U 1 1 5D291F53
+P 5500 2200
+F 0 "J?" H 5400 2500 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 4750 2600 50  0000 L CNN
+F 2 "" H 5500 2200 50  0001 C CNN
+F 3 "~" H 5500 2200 50  0001 C CNN
+	1    5500 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2000 4450 2000
+Wire Wire Line
+	4450 2000 4450 3550
+Wire Wire Line
+	4550 3550 4550 2100
+Wire Wire Line
+	4550 2100 5300 2100
+Wire Wire Line
+	5300 2200 4650 2200
+Wire Wire Line
+	4650 2200 4650 3550
+Wire Wire Line
+	4750 3550 4750 2300
+Wire Wire Line
+	4750 2300 5300 2300
+Wire Wire Line
+	5300 2400 4850 2400
+Wire Wire Line
+	4850 2400 4850 3550
+Wire Wire Line
+	5300 2500 4950 2500
+Wire Wire Line
+	4950 2500 4950 3550
+Wire Wire Line
+	5750 4600 5750 4750
+Wire Wire Line
+	4850 4600 4850 4450
+Wire Wire Line
+	5050 4450 5050 4500
+Wire Wire Line
+	10000 4500 10000 4550
+Text Notes 1500 6500 0    118  ~ 0
+K1 - Standard 12V KFZ-Relais
+Text Notes 1500 6750 0    118  ~ 0
+K2, K3 & K4 - SainSmart 4 Kanal RelaisModul 5V
+$Comp
+L Device:Fuse F1
+U 1 1 5D1F9C61
+P 1250 1200
+F 0 "F1" V 1310 1246 50  0000 C TNN
+F 1 "1A" V 1310 1155 50  0000 R TNN
+F 2 "" V 1180 1200 50  0001 C CNN
+F 3 "~" H 1250 1200 50  0001 C CNN
+	1    1250 1200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1400 1200 1500 1200
+Wire Wire Line
+	1500 4750 1500 1200
+Connection ~ 1500 1200
+Wire Wire Line
+	9750 2150 9750 1200
+Wire Wire Line
+	1000 1000 1100 1000
+$Comp
+L Device:Fuse F2
+U 1 1 5D1FC308
+P 1250 1000
+F 0 "F2" V 1310 1046 50  0000 C TNN
+F 1 "3A" V 1310 955 50  0000 R TNN
+F 2 "" V 1180 1000 50  0001 C CNN
+F 3 "~" H 1250 1000 50  0001 C CNN
+	1    1250 1000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1400 1000 2250 1000
+Wire Wire Line
+	2250 1950 2250 1000
+Connection ~ 2250 1950
+Connection ~ 2250 1000
+$Comp
+L CarDuino:Teensy3.5 U?
+U 1 1 5D22B598
+P 4650 4000
+F 0 "U?" H 4200 4050 50  0000 L CNN
+F 1 "Teensy3.5" H 4200 3950 50  0000 L CNN
+F 2 "" H 4650 4350 50  0001 C CNN
+F 3 "" H 4650 4350 50  0001 C CNN
+	1    4650 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 4250 5250 4250
+Wire Wire Line
+	5250 3500 5050 3500
+$Comp
+L Connector:Conn_01x06_Male J?
+U 1 1 5D30CFD1
+P 5500 2200
+F 0 "J?" H 5200 1750 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 5200 1550 50  0000 C CNN
+F 2 "" H 5500 2200 50  0001 C CNN
+F 3 "~" H 5500 2200 50  0001 C CNN
+	1    5500 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 10250 1400 2    50   Input ~ 0
++5V
+Wire Wire Line
+	4250 3550 4250 1400
+Wire Wire Line
+	3750 1400 4250 1400
+Connection ~ 3750 1400
+Wire Wire Line
+	3750 4750 3750 1400
+Wire Wire Line
+	3250 4900 3250 1400
+Wire Wire Line
+	3250 1400 3750 1400
+Connection ~ 4250 1400
+Connection ~ 3750 6000
+Wire Wire Line
+	3750 6000 4250 6000
+Wire Wire Line
+	3050 4900 3250 4900
+Wire Wire Line
+	3050 5100 3250 5100
+Connection ~ 3250 6000
+Wire Wire Line
+	3250 6000 3750 6000
+Connection ~ 5750 6000
+Wire Wire Line
+	4750 6000 5750 6000
+Wire Wire Line
+	4250 1400 10250 1400
+$Comp
+L Switch:SW_Push Mute
+U 1 1 5D1C8181
+P 6100 3500
+F 0 "Mute" V 6054 3648 50  0000 L CNN
+F 1 "SW_Push" V 6145 3648 50  0000 L CNN
+F 2 "" H 6100 3700 50  0001 C CNN
+F 3 "~" H 6100 3700 50  0001 C CNN
+	1    6100 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Skip
+U 1 1 5D1C8A00
+P 7750 2700
+F 0 "Skip" V 7704 2848 50  0000 L CNN
+F 1 "SW_Push" V 7795 2848 50  0000 L CNN
+F 2 "" H 7750 2900 50  0001 C CNN
+F 3 "~" H 7750 2900 50  0001 C CNN
+	1    7750 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Source+
+U 1 1 5D1C9647
+P 6650 3500
+F 0 "Source+" V 6604 3648 50  0000 L CNN
+F 1 "SW_Push" V 6695 3648 50  0000 L CNN
+F 2 "" H 6650 3700 50  0001 C CNN
+F 3 "~" H 6650 3700 50  0001 C CNN
+	1    6650 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Drehknopf_3
+U 1 1 5D1C977F
+P 8800 2900
+F 0 "Drehknopf_3" H 8800 3185 50  0000 C CNN
+F 1 "SW_Push" H 8800 3094 50  0000 C CNN
+F 2 "" H 8800 3100 50  0001 C CNN
+F 3 "~" H 8800 3100 50  0001 C CNN
+	1    8800 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push Vol-
+U 1 1 5D1CA16B
+P 6650 2700
+F 0 "Vol-" V 6604 2848 50  0000 L CNN
+F 1 "SW_Push" V 6695 2848 50  0000 L CNN
+F 2 "" H 6650 2900 50  0001 C CNN
+F 3 "~" H 6650 2900 50  0001 C CNN
+	1    6650 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Vol+
+U 1 1 5D1CA708
+P 7200 2700
+F 0 "Vol+" V 7154 2848 50  0000 L CNN
+F 1 "SW_Push" V 7245 2848 50  0000 L CNN
+F 2 "" H 7200 2900 50  0001 C CNN
+F 3 "~" H 7200 2900 50  0001 C CNN
+	1    7200 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Source-
+U 1 1 5D1CAED6
+P 7200 3500
+F 0 "Source-" V 7154 3648 50  0000 L CNN
+F 1 "SW_Push" V 7245 3648 50  0000 L CNN
+F 2 "" H 7200 3700 50  0001 C CNN
+F 3 "~" H 7200 3700 50  0001 C CNN
+	1    7200 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Drehknopf_2
+U 1 1 5D1CB2CA
+P 8800 2500
+F 0 "Drehknopf_2" H 8800 2785 50  0000 C CNN
+F 1 "SW_Push" H 8800 2694 50  0000 C CNN
+F 2 "" H 8800 2700 50  0001 C CNN
+F 3 "~" H 8800 2700 50  0001 C CNN
+	1    8800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push Drehknopf_1
+U 1 1 5D1CB7DA
+P 8800 2100
+F 0 "Drehknopf_1" H 8800 2385 50  0000 C CNN
+F 1 "SW_Push" H 8800 2294 50  0000 C CNN
+F 2 "" H 8800 2300 50  0001 C CNN
+F 3 "~" H 8800 2300 50  0001 C CNN
+	1    8800 2100
+	1    0    0    -1  
+$EndComp
+Connection ~ 9300 6000
+Wire Wire Line
+	9300 6000 10300 6000
+Connection ~ 9750 1200
+Wire Wire Line
+	9750 1200 10250 1200
+Wire Wire Line
+	1500 1200 9750 1200
+Wire Wire Line
+	5750 6000 9300 6000
+Wire Wire Line
+	5050 4500 10000 4500
+Wire Wire Line
+	9300 4300 9300 4550
+Wire Wire Line
+	2250 1000 9300 1000
+Wire Wire Line
+	9300 4200 9300 1000
+Connection ~ 9300 1000
+Wire Wire Line
+	9300 1000 10250 1000
+Wire Wire Line
+	5250 3500 5250 4250
+Wire Wire Line
+	5700 2000 6000 2000
+Wire Wire Line
+	6000 2000 6000 1600
+Wire Wire Line
+	6000 1600 9100 1600
+Wire Wire Line
+	9100 1600 9100 2100
+Wire Wire Line
+	9100 2100 9000 2100
+Wire Wire Line
+	9100 2100 9100 2500
+Wire Wire Line
+	9100 2500 9000 2500
+Connection ~ 9100 2100
+Wire Wire Line
+	9100 2500 9100 2900
+Wire Wire Line
+	9100 2900 9000 2900
+Connection ~ 9100 2500
+Wire Wire Line
+	5700 2100 6100 2100
+Wire Wire Line
+	8500 2200 8500 2500
+Wire Wire Line
+	8500 2500 8600 2500
+Wire Wire Line
+	8400 2300 8400 2900
+Wire Wire Line
+	8400 2900 8600 2900
+Wire Wire Line
+	5700 2500 5800 2500
+Wire Wire Line
+	5800 2500 5800 3700
+Wire Wire Line
+	5700 2400 5900 2400
+Wire Wire Line
+	5900 2400 5900 2900
+Wire Wire Line
+	5700 2200 6200 2200
+Wire Wire Line
+	5700 2300 6300 2300
+Wire Wire Line
+	5800 3700 6100 3700
+Connection ~ 6650 2900
+Wire Wire Line
+	5900 2900 6650 2900
+Wire Wire Line
+	6650 2900 7200 2900
+Connection ~ 6100 3700
+Connection ~ 6650 3700
+Wire Wire Line
+	6100 3700 6650 3700
+Wire Wire Line
+	6650 3700 7200 3700
+Wire Wire Line
+	7200 2900 7750 2900
+Connection ~ 7200 2900
+Wire Wire Line
+	6650 2500 6650 2200
+Connection ~ 6650 2200
+Wire Wire Line
+	6650 2200 8500 2200
+Wire Wire Line
+	7200 2500 7200 2100
+Connection ~ 7200 2100
+Wire Wire Line
+	7200 2100 8600 2100
+Wire Wire Line
+	7750 2500 7750 2300
+Connection ~ 7750 2300
+Wire Wire Line
+	7750 2300 8400 2300
+Wire Wire Line
+	6100 3300 6100 2100
+Connection ~ 6100 2100
+Wire Wire Line
+	6100 2100 7200 2100
+Wire Wire Line
+	6650 3300 6650 3200
+Wire Wire Line
+	6650 3200 6200 3200
+Wire Wire Line
+	6200 3200 6200 2200
+Connection ~ 6200 2200
+Wire Wire Line
+	6200 2200 6650 2200
+Wire Wire Line
+	7200 3300 7200 3100
+Wire Wire Line
+	7200 3100 6300 3100
+Wire Wire Line
+	6300 3100 6300 2300
+Connection ~ 6300 2300
+Wire Wire Line
+	6300 2300 7750 2300
+Text Notes 8250 3700 0    50   ~ 0
+Lenkradfernbedienung
+Text Label 5700 2000 0    50   ~ 0
+BN
+Text Label 5700 2100 0    50   ~ 0
+BU
+Text Label 5700 2200 0    50   ~ 0
+YE
+Text Label 5700 2300 0    50   ~ 0
+GN
+Text Label 5700 2400 0    50   ~ 0
+RD
+Text Label 5700 2500 0    50   ~ 0
+BK
+Wire Notes Line
+	5550 1500 9200 1500
+Wire Notes Line
+	9200 1500 9200 3800
+Wire Notes Line
+	9200 3800 5550 3800
+Wire Notes Line
+	5550 3800 5550 1500
+$EndSCHEMATC

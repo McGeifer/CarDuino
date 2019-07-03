@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name CarDuino)(type Legacy)(uri ${KIPRJMOD}/library/CarDuino.lib)(options "")(descr ""))
+  (lib (name relay-2x)(type Legacy)(uri ${KIPRJMOD}/library/relay-2x.lib)(options "")(descr ""))
+)
