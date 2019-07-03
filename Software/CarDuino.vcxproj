@@ -73,8 +73,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\CarDuino;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\teensy\avr\libraries;$(ProjectDir)..\libraries;C:\Program Files (x86)\Arduino\hardware\teensy\avr\cores\teensy3;C:\Program Files (x86)\Arduino\hardware\teensy\avr\cores\teensy3\avr;C:\Program Files (x86)\Arduino\hardware\teensy\avr\cores\teensy3\util;C:\Program Files (x86)\Arduino\hardware\tools\arm\arm-none-eabi\include;C:\Program Files (x86)\Arduino\hardware\tools\arm\lib\gcc\arm-none-eabi\5.4.1\include;C:\Program Files (x86)\Arduino\hardware\teensy;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>$(ProjectDir)__vm\.CarDuino.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Software;C:\Program Files (x86)\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\teensy\avr\libraries;D:\Schilly\Documents\Arduino\libraries;C:\Program Files (x86)\Arduino\hardware\teensy\avr\cores\teensy3;C:\Program Files (x86)\Arduino\hardware\teensy\avr\cores\teensy3\avr;C:\Program Files (x86)\Arduino\hardware\teensy\avr\cores\teensy3\util;C:\Program Files (x86)\Arduino\hardware\tools\arm\arm-none-eabi\include;C:\Program Files (x86)\Arduino\hardware\tools\arm\lib\gcc\arm-none-eabi\5.4.1\include;C:\Program Files (x86)\Arduino\hardware\teensy;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.Software.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <PreprocessorDefinitions>__HARDWARE_mk64fx512__;__HARDWARE_MK64FX512__;__MK64FX512__;TEENSYDUINO=146;ARDUINO=10807;F_CPU=120000000;USB_SERIAL;LAYOUT_US_ENGLISH;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.CarDuino.vsarduino.h" />
+    <ClInclude Include="__vm\.Software.vsarduino.h" />
   </ItemGroup>
   <PropertyGroup>
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>

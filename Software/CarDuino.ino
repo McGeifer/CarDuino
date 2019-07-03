@@ -1,11 +1,11 @@
 /*
     Name:       CarDuino.ino
     Created:	03.07.2019 10:44:27
-    Author:     J\Schilly
+    Author:     J.Schiller
     
     MIT License
 
-    Copyright (c) 2019 McGeifer
+    Copyright (c) 2019 J.Schiller
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
