@@ -1,8 +1,8 @@
 /*
-    Name:           CarDuino.ino
-    Created:	    03.07.2019 18:44:27
+    Name:           communication.cpp
+    Created:	    03.07.2019 18:54:023
     Author:         J.Schiller
-    
+
     MIT License
 
     Copyright (c) 2019 J.Schiller
@@ -27,38 +27,8 @@
 */
 
 #include "communication.h"
-#include "gpio.h"
 
-#define DEBUG
-
-
-
-const char CARDUINO_WELCOME[] = "CarDuino";
-const char CARDUINO_VERSION[] = "Version: 0.1";
-const char CARDUINO_CREATED[] = "Created: 03.07.2019 18:44:27";
-const char CARDUINO_AUTHOR[] = "Author:  J.Schiller";
-
-void setup()
+void InitCommunication(void)
 {
-
-#ifdef DEBUG
-    CAR_SERIAL_BEGIN(115200);
-    CAR_PRINT_MSG(CARDUINO_WELCOME);
-    CAR_PRINT_MSG(CARDUINO_VERSION);
-    CAR_PRINT_MSG(CARDUINO_CREATED);
-    CAR_PRINT_MSG(CARDUINO_AUTHOR);
-    CAR_PRINT_MSG();
-    CAR_PRINT_MSG("Verbindung hergestellt...");
-    CAR_PRINT_MSG();
-#endif // DEBUG
-
-    InitIO();
-    InitCommunication();
-
-}
-
-void loop()
-{
-    
 
 }

@@ -107,8 +107,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="__vm\.CarDuino.vsarduino.h" />
+    <ClInclude Include="communication.h" />
+    <ClInclude Include="gpio.h" />
     <ClInclude Include="__vm\.Software.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="communication.cpp" />
+    <ClCompile Include="gpio.cpp" />
   </ItemGroup>
   <PropertyGroup>
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>

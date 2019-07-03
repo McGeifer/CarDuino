@@ -666,4 +666,16 @@ Wire Wire Line
 	5500 6000 9350 6000
 Wire Wire Line
 	2000 1000 9350 1000
+Text Label 4700 2500 0    50   ~ 0
+LFB_OUT1
+Text Label 4700 2400 0    50   ~ 0
+LFB_OUT2
+Text Label 4700 2300 0    50   ~ 0
+LFB_OUT3
+Text Label 4700 2000 0    50   ~ 0
+LFB_IN1
+Text Label 4700 2100 0    50   ~ 0
+LFB_IN2
+Text Label 4700 2200 0    50   ~ 0
+LFB_IN3
 $EndSCHEMATC
