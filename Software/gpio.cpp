@@ -30,16 +30,21 @@
 
 void InitIO(void)
 {
-    pinMode(PIN_K3, OUTPUT);
-    pinMode(PIN_K4, OUTPUT);
-    
-    pinMode(PIN_LFB_IN1, INPUT);
-    pinMode(PIN_LFB_IN2, INPUT);
-    pinMode(PIN_LFB_IN3, INPUT);
-    pinMode(PIN_LFB_OUT1, OUTPUT);
-    pinMode(PIN_LFB_OUT2, OUTPUT);
-    pinMode(PIN_LFB_OUT3, OUTPUT);
+    pinMode(PIN_SWC_IN1, INPUT);
+    pinMode(PIN_SWC_IN2, INPUT);
+    pinMode(PIN_SWC_IN3, INPUT);
 
-    analogWrite(PIN_JY_KEY1, 0);
-    analogRead(PIN_JY_CURRENT); // abspeichern!
+
+    pinMode(PIN_K3, OUTPUT);
+    digitalWrite(PIN_K3, LOW);
+    pinMode(PIN_K4, OUTPUT);
+    digitalWrite(PIN_K4, LOW);
+    pinMode(PIN_SWC_OUT1, OUTPUT);
+    digitalWrite(PIN_SWC_OUT1, LOW);
+    pinMode(PIN_SWC_OUT2, OUTPUT);
+    digitalWrite(PIN_SWC_OUT2, LOW);
+    pinMode(PIN_SWC_OUT3, OUTPUT);
+    digitalWrite(PIN_SWC_OUT3, LOW);
+
+    analogWrite(PIN_HU_KEY1, 0);
 }

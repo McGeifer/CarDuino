@@ -9,9 +9,9 @@
 	#include "WProgram.h"
 #endif
 
-#define CAR_SERIAL_PORT         Serial1
-#define CAR_SERIAL_BEGIN(arg)   (CAR_SERIAL_PORT.begin(arg))
-#define CAR_PRINT_MSG(arg)      (CAR_SERIAL_PORT.println(arg))
+#define CAR_SERIAL_PORT             Serial1
+#define CAR_SERIAL_BEGIN(arg)       (CAR_SERIAL_PORT.begin(arg))
+#define CAR_SERIAL_PRINT_MSG(arg)   (CAR_SERIAL_PORT.println(arg))
 
 void InitCommunication(void);
 

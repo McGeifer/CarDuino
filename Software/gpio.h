@@ -14,16 +14,16 @@
 #define PIN_K4          25
 
 // Signale Lenkradfernbedienung
-#define PIN_LFB_IN1     55
-#define PIN_LFB_IN2     56
-#define PIN_LFB_IN3     57
-#define PIN_LFB_OUT1    37
-#define PIN_LFB_OUT2    36
-#define PIN_LFB_OUT3    35
+#define PIN_SWC_IN1     55
+#define PIN_SWC_IN2     56
+#define PIN_SWC_IN3     57
+#define PIN_SWC_OUT1    37
+#define PIN_SWC_OUT2    36
+#define PIN_SWC_OUT3    35
 
 // Signale Joying HU
-#define PIN_JY_CURRENT  0
-#define PIN_JY_KEY1     0
+#define PIN_HU_CURRENT  0
+#define PIN_HU_KEY1     0
 
 void InitIO(void);
 

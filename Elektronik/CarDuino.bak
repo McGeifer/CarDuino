@@ -17,79 +17,24 @@ $EndDescr
 $Comp
 L teensy:Teensy3.5 U?
 U 1 1 5D1B0B38
-P 14750 3550
-F 0 "U?" H 14750 6027 60  0000 C CNN
-F 1 "Teensy3.5" H 14750 5921 60  0000 C CNN
-F 2 "" H 14650 5750 60  0000 C CNN
-F 3 "" H 14750 5850 60  0000 C CNN
-F 4 "https://www.pjrc.com/teensy/pinout.html" H 14750 5823 50  0000 C CNN "Pinouts"
-	1    14750 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Relay:SANYOU_SRD_Form_C K?
-U 1 1 5D1B4FC2
-P 14450 -800
-F 0 "K?" H 14880 -754 50  0000 L CNN
-F 1 "SANYOU_SRD_Form_C" H 14880 -845 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 14900 -850 50  0001 L CNN
-F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14450 -800 50  0001 C CNN
-	1    14450 -800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Relay:SANYOU_SRD_Form_C K?
-U 1 1 5D1B592D
-P 14450 150
-F 0 "K?" H 14880 196 50  0000 L CNN
-F 1 "SANYOU_SRD_Form_C" H 14880 105 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 14900 100 50  0001 L CNN
-F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14450 150 50  0001 C CNN
-	1    14450 150 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Relay:SANYOU_SRD_Form_C K?
-U 1 1 5D1B6B79
-P 14000 6700
-F 0 "K?" H 14430 6746 50  0000 L CNN
-F 1 "SANYOU_SRD_Form_C" H 14430 6655 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 14450 6650 50  0001 L CNN
-F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14000 6700 50  0001 C CNN
-	1    14000 6700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Relay:SANYOU_SRD_Form_C K?
-U 1 1 5D1B79C1
-P 14600 7350
-F 0 "K?" H 15030 7396 50  0000 L CNN
-F 1 "SANYOU_SRD_Form_C" H 15030 7305 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 15050 7300 50  0001 L CNN
-F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14600 7350 50  0001 C CNN
-	1    14600 7350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x03_Male J?
-U 1 1 5D1D05AA
-P 13050 150
-F 0 "J?" H 13158 431 50  0000 C CNN
-F 1 "Conn_01x03_Male" H 13158 340 50  0000 C CNN
-F 2 "" H 13050 150 50  0001 C CNN
-F 3 "~" H 13050 150 50  0001 C CNN
-	1    13050 150 
+P 13200 3550
+F 0 "U?" H 13200 6027 60  0000 C CNN
+F 1 "Teensy3.5" H 13200 5921 60  0000 C CNN
+F 2 "" H 13100 5750 60  0000 C CNN
+F 3 "" H 13200 5850 60  0000 C CNN
+F 4 "https://www.pjrc.com/teensy/pinout.html" H 13200 5823 50  0000 C CNN "Pinouts"
+	1    13200 3550
 	1    0    0    -1  
 $EndComp
 $Comp
 L CarDuino:AZDelivery_ACS712 U?
 U 1 1 5D1DB42C
-P 8500 4250
-F 0 "U?" H 8500 3935 50  0000 C CNN
-F 1 "AZDelivery_ACS712" H 8500 4026 50  0000 C CNN
-F 2 "" H 8500 4500 50  0001 C CNN
-F 3 "" H 8500 4500 50  0001 C CNN
-	1    8500 4250
+P 8550 4250
+F 0 "U?" H 8550 3935 50  0000 C CNN
+F 1 "AZDelivery_ACS712" H 8550 4026 50  0000 C CNN
+F 2 "" H 8550 4500 50  0001 C CNN
+F 3 "" H 8550 4500 50  0001 C CNN
+	1    8550 4250
 	-1   0    0    1   
 $EndComp
 Text GLabel 1000 1000 0    50   Input ~ 0
@@ -236,44 +181,14 @@ Wire Wire Line
 Wire Wire Line
 	2150 3450 2150 3600
 Connection ~ 2000 2750
-$Comp
-L CarDuino:Joying U?
-U 1 1 5D242C5F
-P 9750 5000
-F 0 "U?" H 10278 5046 50  0000 L CNN
-F 1 "Joying" H 10278 4955 50  0000 L CNN
-F 2 "" H 9750 5550 50  0001 C CNN
-F 3 "" H 9750 5550 50  0001 C CNN
-	1    9750 5000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9350 5450 9350 6000
-Wire Wire Line
-	9350 4300 9150 4300
-Wire Wire Line
-	9150 4200 9350 4200
-$Comp
-L relay-2x:RELAY-2X K?
-U 2 1 5D260317
-P 9650 2400
-F 0 "K?" H 10016 2480 30  0000 L CNN
-F 1 "RELAY-2X" H 10016 2420 30  0001 L CNN
-F 2 "" H 9650 2400 60  0000 C CNN
-F 3 "" H 9650 2400 60  0000 C CNN
-	2    9650 2400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9800 2550 9800 2850
 Wire Wire Line
 	9800 2850 9450 2850
 Wire Wire Line
 	9450 2850 9450 4550
 Text GLabel 10300 6000 2    50   Input ~ 0
 0V
-Wire Wire Line
-	5500 4600 4600 4600
 Wire Wire Line
 	4500 5200 4500 6000
 Wire Wire Line
@@ -316,17 +231,11 @@ Wire Wire Line
 Wire Wire Line
 	4700 2500 4700 3550
 Wire Wire Line
-	5500 4600 5500 4750
-Wire Wire Line
-	4600 4600 4600 4450
-Wire Wire Line
 	4800 4450 4800 4500
-Wire Wire Line
-	10050 4500 10050 4550
 Text Notes 1500 6500 0    118  ~ 0
 K1 - Standard 12V KFZ-Relais
 Text Notes 1500 6750 0    118  ~ 0
-K2, K3 & K4 - SainSmart 4 Kanal RelaisModul 5V
+K2 - K5 - SainSmart 4 Kanal RelaisModul 5V
 $Comp
 L Device:Fuse F1
 U 1 1 5D1F9C61
@@ -343,8 +252,6 @@ Wire Wire Line
 Wire Wire Line
 	1500 4750 1500 1200
 Connection ~ 1500 1200
-Wire Wire Line
-	9800 2150 9800 1200
 Wire Wire Line
 	1000 1000 1100 1000
 $Comp
@@ -375,7 +282,7 @@ F 3 "" H 4400 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8150 4250 5000 4250
+	8200 4250 5000 4250
 Wire Wire Line
 	5000 3500 4800 3500
 $Comp
@@ -407,8 +314,6 @@ Wire Wire Line
 	2800 4900 3000 4900
 Wire Wire Line
 	2800 5100 3000 5100
-Wire Wire Line
-	4000 1400 10000 1400
 $Comp
 L Switch:SW_Push Mute
 U 1 1 5D1C8181
@@ -509,11 +414,9 @@ F 3 "~" H 8550 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5100 4500 10050 4500
-Wire Wire Line
 	9350 4300 9350 4550
 Wire Wire Line
-	9350 4200 9350 1000
+	9350 4200 9350 2550
 Wire Wire Line
 	5000 3500 5000 4250
 Wire Wire Line
@@ -651,19 +554,587 @@ Wire Wire Line
 	3000 6000 3500 6000
 Wire Wire Line
 	4500 6000 5500 6000
-Connection ~ 9350 1000
-Wire Wire Line
-	9350 1000 10250 1000
 Connection ~ 9350 6000
 Wire Wire Line
 	9350 6000 10300 6000
-Connection ~ 9800 1200
 Wire Wire Line
-	9800 1200 10250 1200
+	5500 6000 6500 6000
+Text Label 4700 2500 0    50   ~ 0
+LFB_OUT1
+Text Label 4700 2400 0    50   ~ 0
+LFB_OUT2
+Text Label 4700 2300 0    50   ~ 0
+LFB_OUT3
+Text Label 4700 2000 0    50   ~ 0
+LFB_IN1
+Text Label 4700 2100 0    50   ~ 0
+LFB_IN2
+Text Label 4700 2200 0    50   ~ 0
+LFB_IN3
+$Comp
+L CarDuino:Joying U?
+U 1 1 5D242C5F
+P 9750 5000
+F 0 "U?" H 10278 5046 50  0000 L CNN
+F 1 "Joying" H 10278 4955 50  0000 L CNN
+F 2 "" H 9750 5550 50  0001 C CNN
+F 3 "" H 9750 5550 50  0001 C CNN
+	1    9750 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 4500 10050 4550
+Wire Wire Line
+	4800 4500 10050 4500
+Wire Wire Line
+	8900 4200 9350 4200
+Wire Wire Line
+	8900 4300 9350 4300
+Wire Wire Line
+	4000 1400 10250 1400
+Wire Wire Line
+	4600 4700 5500 4700
+Wire Wire Line
+	4600 4450 4600 4700
+Wire Wire Line
+	5500 4700 5500 4750
+$Comp
+L relay-2x:RELAY-2X K5
+U 1 1 5D2078B4
+P 6850 5000
+F 0 "K5" H 6728 5025 30  0000 L CNN
+F 1 "RELAY-2X" H 6728 4995 30  0001 L CNN
+F 2 "" H 6850 5000 60  0000 C CNN
+F 3 "" H 6850 5000 60  0000 C CNN
+	1    6850 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L relay-2x:RELAY-2X K5
+U 2 1 5D208ABA
+P 9200 2400
+F 0 "K5" H 9566 2450 30  0000 L CNN
+F 1 "RELAY-2X" H 9566 2420 30  0001 L CNN
+F 2 "" H 9200 2400 60  0000 C CNN
+F 3 "" H 9200 2400 60  0000 C CNN
+	2    9200 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 2150 9500 1000
+Wire Wire Line
+	4700 4450 4700 4600
+Wire Wire Line
+	4700 4600 6500 4600
+Wire Wire Line
+	6500 4600 6500 4750
+Wire Wire Line
+	6500 5200 6500 6000
+Connection ~ 6500 6000
+Wire Wire Line
+	6500 6000 9350 6000
+Connection ~ 9500 1000
+Wire Wire Line
+	9500 1000 10250 1000
+Wire Wire Line
+	2000 1000 9500 1000
 Wire Wire Line
 	1500 1200 9800 1200
 Wire Wire Line
-	5500 6000 9350 6000
+	9800 1200 9800 2850
+Connection ~ 9800 1200
 Wire Wire Line
-	2000 1000 9350 1000
+	9800 1200 10250 1200
+$Comp
+L Switch:SW_Push Mute?
+U 1 1 5D22250E
+P 15200 4300
+F 0 "Mute?" V 15154 4448 50  0000 L CNN
+F 1 "SW_Push" V 15245 4448 50  0000 L CNN
+F 2 "" H 15200 4500 50  0001 C CNN
+F 3 "~" H 15200 4500 50  0001 C CNN
+	1    15200 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Skip?
+U 1 1 5D222514
+P 18100 3800
+F 0 "Skip?" V 18054 3948 50  0000 L CNN
+F 1 "SW_Push" V 18145 3948 50  0000 L CNN
+F 2 "" H 18100 4000 50  0001 C CNN
+F 3 "~" H 18100 4000 50  0001 C CNN
+	1    18100 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Drehknopf_?
+U 1 1 5D222520
+P 19000 3300
+F 0 "Drehknopf_?" H 19000 3585 50  0000 C CNN
+F 1 "SW_Push" H 19000 3494 50  0000 C CNN
+F 2 "" H 19000 3500 50  0001 C CNN
+F 3 "~" H 19000 3500 50  0001 C CNN
+	1    19000 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Vol-?
+U 1 1 5D222526
+P 17000 3800
+F 0 "Vol-?" V 16954 3948 50  0000 L CNN
+F 1 "SW_Push" V 17045 3948 50  0000 L CNN
+F 2 "" H 17000 4000 50  0001 C CNN
+F 3 "~" H 17000 4000 50  0001 C CNN
+	1    17000 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Vol+?
+U 1 1 5D22252C
+P 17550 3800
+F 0 "Vol+?" V 17504 3948 50  0000 L CNN
+F 1 "SW_Push" V 17595 3948 50  0000 L CNN
+F 2 "" H 17550 4000 50  0001 C CNN
+F 3 "~" H 17550 4000 50  0001 C CNN
+	1    17550 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Drehknopf_?
+U 1 1 5D222538
+P 19700 3300
+F 0 "Drehknopf_?" H 19700 3585 50  0000 C CNN
+F 1 "SW_Push" H 19700 3494 50  0000 C CNN
+F 2 "" H 19700 3500 50  0001 C CNN
+F 3 "~" H 19700 3500 50  0001 C CNN
+	1    19700 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Drehknopf_?
+U 1 1 5D22253E
+P 20350 3300
+F 0 "Drehknopf_?" H 20350 3585 50  0000 C CNN
+F 1 "SW_Push" H 20350 3494 50  0000 C CNN
+F 2 "" H 20350 3500 50  0001 C CNN
+F 3 "~" H 20350 3500 50  0001 C CNN
+	1    20350 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Source+?
+U 1 1 5D22251A
+P 15750 4300
+F 0 "Source+?" V 15704 4448 50  0000 L CNN
+F 1 "SW_Push" V 15795 4448 50  0000 L CNN
+F 2 "" H 15750 4500 50  0001 C CNN
+F 3 "~" H 15750 4500 50  0001 C CNN
+	1    15750 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Source-?
+U 1 1 5D222532
+P 16300 4300
+F 0 "Source-?" V 16254 4448 50  0000 L CNN
+F 1 "SW_Push" V 16345 4448 50  0000 L CNN
+F 2 "" H 16300 4500 50  0001 C CNN
+F 3 "~" H 16300 4500 50  0001 C CNN
+	1    16300 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D26DBBA
+P 15200 3950
+F 0 "R?" H 15270 3996 50  0000 L CNN
+F 1 "R" H 15270 3905 50  0000 L CNN
+F 2 "" V 15130 3950 50  0001 C CNN
+F 3 "~" H 15200 3950 50  0001 C CNN
+	1    15200 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D2721AA
+P 15750 3950
+F 0 "R?" H 15820 3996 50  0000 L CNN
+F 1 "R" H 15820 3905 50  0000 L CNN
+F 2 "" V 15680 3950 50  0001 C CNN
+F 3 "~" H 15750 3950 50  0001 C CNN
+	1    15750 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D275E7F
+P 16300 3950
+F 0 "R?" H 16370 3996 50  0000 L CNN
+F 1 "R" H 16370 3905 50  0000 L CNN
+F 2 "" V 16230 3950 50  0001 C CNN
+F 3 "~" H 16300 3950 50  0001 C CNN
+	1    16300 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D279CC5
+P 17000 3450
+F 0 "R?" H 17070 3496 50  0000 L CNN
+F 1 "R" H 17070 3405 50  0000 L CNN
+F 2 "" V 16930 3450 50  0001 C CNN
+F 3 "~" H 17000 3450 50  0001 C CNN
+	1    17000 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D27DA22
+P 17550 3450
+F 0 "R?" H 17620 3496 50  0000 L CNN
+F 1 "R" H 17620 3405 50  0000 L CNN
+F 2 "" V 17480 3450 50  0001 C CNN
+F 3 "~" H 17550 3450 50  0001 C CNN
+	1    17550 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D281840
+P 18100 3450
+F 0 "R?" H 18170 3496 50  0000 L CNN
+F 1 "R" H 18170 3405 50  0000 L CNN
+F 2 "" V 18030 3450 50  0001 C CNN
+F 3 "~" H 18100 3450 50  0001 C CNN
+	1    18100 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D2857D7
+P 19000 2950
+F 0 "R?" H 19070 2996 50  0000 L CNN
+F 1 "R" H 19070 2905 50  0000 L CNN
+F 2 "" V 18930 2950 50  0001 C CNN
+F 3 "~" H 19000 2950 50  0001 C CNN
+	1    19000 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D2895FC
+P 19700 2950
+F 0 "R?" H 19770 2996 50  0000 L CNN
+F 1 "R" H 19770 2905 50  0000 L CNN
+F 2 "" V 19630 2950 50  0001 C CNN
+F 3 "~" H 19700 2950 50  0001 C CNN
+	1    19700 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D28D536
+P 20350 2950
+F 0 "R?" H 20420 2996 50  0000 L CNN
+F 1 "R" H 20420 2905 50  0000 L CNN
+F 2 "" V 20280 2950 50  0001 C CNN
+F 3 "~" H 20350 2950 50  0001 C CNN
+	1    20350 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15200 4500 15200 4700
+Wire Wire Line
+	15200 4700 15750 4700
+Wire Wire Line
+	20350 3500 20350 4700
+Connection ~ 20350 4700
+Wire Wire Line
+	20350 4700 21000 4700
+Wire Wire Line
+	19700 3500 19700 4700
+Connection ~ 19700 4700
+Wire Wire Line
+	19700 4700 20350 4700
+Wire Wire Line
+	19000 3500 19000 4700
+Connection ~ 19000 4700
+Wire Wire Line
+	19000 4700 19700 4700
+Wire Wire Line
+	17000 4000 17000 4700
+Connection ~ 17000 4700
+Wire Wire Line
+	17000 4700 17550 4700
+Wire Wire Line
+	17550 4000 17550 4700
+Connection ~ 17550 4700
+Wire Wire Line
+	17550 4700 18100 4700
+Wire Wire Line
+	18100 4000 18100 4700
+Connection ~ 18100 4700
+Wire Wire Line
+	18100 4700 19000 4700
+Wire Wire Line
+	15750 4500 15750 4700
+Connection ~ 15750 4700
+Wire Wire Line
+	15750 4700 16300 4700
+Wire Wire Line
+	16300 4500 16300 4700
+Connection ~ 16300 4700
+Wire Wire Line
+	16300 4700 17000 4700
+$Comp
+L Connector:Conn_01x06_Female J?
+U 1 1 5D2BCADD
+P 15650 650
+F 0 "J?" H 15550 950 50  0001 L CNN
+F 1 "Conn_01x06_Female" H 14900 1050 50  0001 L CNN
+F 2 "" H 15650 650 50  0001 C CNN
+F 3 "~" H 15650 650 50  0001 C CNN
+	1    15650 650 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x06_Male J?
+U 1 1 5D2BCAE3
+P 15650 650
+F 0 "J?" H 15350 200 50  0001 C CNN
+F 1 "Conn_01x06_Male" H 15450 -50 50  0001 C CNN
+F 2 "" H 15650 650 50  0001 C CNN
+F 3 "~" H 15650 650 50  0001 C CNN
+	1    15650 650 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push Mute?
+U 1 1 5D2BCAE9
+P 16250 1950
+F 0 "Mute?" V 16204 2098 50  0000 L CNN
+F 1 "SW_Push" V 16295 2098 50  0000 L CNN
+F 2 "" H 16250 2150 50  0001 C CNN
+F 3 "~" H 16250 2150 50  0001 C CNN
+	1    16250 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Skip?
+U 1 1 5D2BCAEF
+P 17900 1150
+F 0 "Skip?" V 17854 1298 50  0000 L CNN
+F 1 "SW_Push" V 17945 1298 50  0000 L CNN
+F 2 "" H 17900 1350 50  0001 C CNN
+F 3 "~" H 17900 1350 50  0001 C CNN
+	1    17900 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Source+?
+U 1 1 5D2BCAF5
+P 16800 1950
+F 0 "Source+?" V 16754 2098 50  0000 L CNN
+F 1 "SW_Push" V 16845 2098 50  0000 L CNN
+F 2 "" H 16800 2150 50  0001 C CNN
+F 3 "~" H 16800 2150 50  0001 C CNN
+	1    16800 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Drehknopf_?
+U 1 1 5D2BCAFB
+P 18950 1350
+F 0 "Drehknopf_?" H 18950 1635 50  0000 C CNN
+F 1 "SW_Push" H 18950 1544 50  0000 C CNN
+F 2 "" H 18950 1550 50  0001 C CNN
+F 3 "~" H 18950 1550 50  0001 C CNN
+	1    18950 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push Vol-?
+U 1 1 5D2BCB01
+P 16800 1150
+F 0 "Vol-?" V 16754 1298 50  0000 L CNN
+F 1 "SW_Push" V 16845 1298 50  0000 L CNN
+F 2 "" H 16800 1350 50  0001 C CNN
+F 3 "~" H 16800 1350 50  0001 C CNN
+	1    16800 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Vol+?
+U 1 1 5D2BCB07
+P 17350 1150
+F 0 "Vol+?" V 17304 1298 50  0000 L CNN
+F 1 "SW_Push" V 17395 1298 50  0000 L CNN
+F 2 "" H 17350 1350 50  0001 C CNN
+F 3 "~" H 17350 1350 50  0001 C CNN
+	1    17350 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Source-?
+U 1 1 5D2BCB0D
+P 17350 1950
+F 0 "Source-?" V 17304 2098 50  0000 L CNN
+F 1 "SW_Push" V 17395 2098 50  0000 L CNN
+F 2 "" H 17350 2150 50  0001 C CNN
+F 3 "~" H 17350 2150 50  0001 C CNN
+	1    17350 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push Drehknopf_?
+U 1 1 5D2BCB13
+P 18950 950
+F 0 "Drehknopf_?" H 18950 1235 50  0000 C CNN
+F 1 "SW_Push" H 18950 1144 50  0000 C CNN
+F 2 "" H 18950 1150 50  0001 C CNN
+F 3 "~" H 18950 1150 50  0001 C CNN
+	1    18950 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push Drehknopf_?
+U 1 1 5D2BCB19
+P 18950 550
+F 0 "Drehknopf_?" H 18950 835 50  0000 C CNN
+F 1 "SW_Push" H 18950 744 50  0000 C CNN
+F 2 "" H 18950 750 50  0001 C CNN
+F 3 "~" H 18950 750 50  0001 C CNN
+	1    18950 550 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15850 450  16150 450 
+Wire Wire Line
+	16150 450  16150 50  
+Wire Wire Line
+	16150 50   19250 50  
+Wire Wire Line
+	19250 50   19250 550 
+Wire Wire Line
+	19250 550  19150 550 
+Wire Wire Line
+	19250 550  19250 950 
+Wire Wire Line
+	19250 950  19150 950 
+Connection ~ 19250 550 
+Wire Wire Line
+	19250 950  19250 1350
+Wire Wire Line
+	19250 1350 19150 1350
+Connection ~ 19250 950 
+Wire Wire Line
+	15850 550  16250 550 
+Wire Wire Line
+	18650 650  18650 950 
+Wire Wire Line
+	18650 950  18750 950 
+Wire Wire Line
+	18550 750  18550 1350
+Wire Wire Line
+	18550 1350 18750 1350
+Wire Wire Line
+	15850 950  15950 950 
+Wire Wire Line
+	15950 950  15950 2150
+Wire Wire Line
+	15850 850  16050 850 
+Wire Wire Line
+	16050 850  16050 1350
+Wire Wire Line
+	15850 650  16350 650 
+Wire Wire Line
+	15850 750  16450 750 
+Wire Wire Line
+	15950 2150 16250 2150
+Connection ~ 16800 1350
+Wire Wire Line
+	16050 1350 16800 1350
+Wire Wire Line
+	16800 1350 17350 1350
+Connection ~ 16250 2150
+Connection ~ 16800 2150
+Wire Wire Line
+	16250 2150 16800 2150
+Wire Wire Line
+	16800 2150 17350 2150
+Wire Wire Line
+	17350 1350 17900 1350
+Connection ~ 17350 1350
+Wire Wire Line
+	16800 950  16800 650 
+Connection ~ 16800 650 
+Wire Wire Line
+	16800 650  18650 650 
+Wire Wire Line
+	17350 950  17350 550 
+Connection ~ 17350 550 
+Wire Wire Line
+	17350 550  18750 550 
+Wire Wire Line
+	17900 950  17900 750 
+Connection ~ 17900 750 
+Wire Wire Line
+	17900 750  18550 750 
+Wire Wire Line
+	16250 1750 16250 550 
+Connection ~ 16250 550 
+Wire Wire Line
+	16250 550  17350 550 
+Wire Wire Line
+	16800 1750 16800 1650
+Wire Wire Line
+	16800 1650 16350 1650
+Wire Wire Line
+	16350 1650 16350 650 
+Connection ~ 16350 650 
+Wire Wire Line
+	16350 650  16800 650 
+Wire Wire Line
+	17350 1750 17350 1550
+Wire Wire Line
+	17350 1550 16450 1550
+Wire Wire Line
+	16450 1550 16450 750 
+Connection ~ 16450 750 
+Wire Wire Line
+	16450 750  17900 750 
+Text Notes 18400 2150 0    50   ~ 0
+Lenkradfernbedienung
+Text Label 15850 450  0    50   ~ 0
+BN
+Text Label 15850 550  0    50   ~ 0
+BU
+Text Label 15850 650  0    50   ~ 0
+YE
+Text Label 15850 750  0    50   ~ 0
+GN
+Text Label 15850 850  0    50   ~ 0
+RD
+Text Label 15850 950  0    50   ~ 0
+BK
+Wire Notes Line
+	15700 -50  19350 -50 
+Wire Notes Line
+	19350 -50  19350 2250
+Wire Notes Line
+	19350 2250 15700 2250
+Wire Notes Line
+	15700 2250 15700 -50 
+Wire Wire Line
+	20350 2800 20350 2550
+Wire Wire Line
+	20350 2550 17550 2550
+Wire Wire Line
+	17550 2550 17550 3300
+Wire Wire Line
+	17550 2550 15200 2550
+Wire Wire Line
+	15200 2550 15200 3800
+Connection ~ 17550 2550
 $EndSCHEMATC

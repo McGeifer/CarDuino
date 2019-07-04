@@ -17,79 +17,24 @@ $EndDescr
 $Comp
 L teensy:Teensy3.5 U?
 U 1 1 5D1B0B38
-P 14750 3550
-F 0 "U?" H 14750 6027 60  0000 C CNN
-F 1 "Teensy3.5" H 14750 5921 60  0000 C CNN
-F 2 "" H 14650 5750 60  0000 C CNN
-F 3 "" H 14750 5850 60  0000 C CNN
-F 4 "https://www.pjrc.com/teensy/pinout.html" H 14750 5823 50  0000 C CNN "Pinouts"
-	1    14750 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Relay:SANYOU_SRD_Form_C K?
-U 1 1 5D1B4FC2
-P 14450 -800
-F 0 "K?" H 14880 -754 50  0000 L CNN
-F 1 "SANYOU_SRD_Form_C" H 14880 -845 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 14900 -850 50  0001 L CNN
-F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14450 -800 50  0001 C CNN
-	1    14450 -800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Relay:SANYOU_SRD_Form_C K?
-U 1 1 5D1B592D
-P 14450 150
-F 0 "K?" H 14880 196 50  0000 L CNN
-F 1 "SANYOU_SRD_Form_C" H 14880 105 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 14900 100 50  0001 L CNN
-F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14450 150 50  0001 C CNN
-	1    14450 150 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Relay:SANYOU_SRD_Form_C K?
-U 1 1 5D1B6B79
-P 14000 6700
-F 0 "K?" H 14430 6746 50  0000 L CNN
-F 1 "SANYOU_SRD_Form_C" H 14430 6655 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 14450 6650 50  0001 L CNN
-F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14000 6700 50  0001 C CNN
-	1    14000 6700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Relay:SANYOU_SRD_Form_C K?
-U 1 1 5D1B79C1
-P 14600 7350
-F 0 "K?" H 15030 7396 50  0000 L CNN
-F 1 "SANYOU_SRD_Form_C" H 15030 7305 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 15050 7300 50  0001 L CNN
-F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 14600 7350 50  0001 C CNN
-	1    14600 7350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x03_Male J?
-U 1 1 5D1D05AA
-P 13050 150
-F 0 "J?" H 13158 431 50  0000 C CNN
-F 1 "Conn_01x03_Male" H 13158 340 50  0000 C CNN
-F 2 "" H 13050 150 50  0001 C CNN
-F 3 "~" H 13050 150 50  0001 C CNN
-	1    13050 150 
+P 13200 3550
+F 0 "U?" H 13200 6027 60  0000 C CNN
+F 1 "Teensy3.5" H 13200 5921 60  0000 C CNN
+F 2 "" H 13100 5750 60  0000 C CNN
+F 3 "" H 13200 5850 60  0000 C CNN
+F 4 "https://www.pjrc.com/teensy/pinout.html" H 13200 5823 50  0000 C CNN "Pinouts"
+	1    13200 3550
 	1    0    0    -1  
 $EndComp
 $Comp
 L CarDuino:AZDelivery_ACS712 U?
 U 1 1 5D1DB42C
-P 8500 4250
-F 0 "U?" H 8500 3935 50  0000 C CNN
-F 1 "AZDelivery_ACS712" H 8500 4026 50  0000 C CNN
-F 2 "" H 8500 4500 50  0001 C CNN
-F 3 "" H 8500 4500 50  0001 C CNN
-	1    8500 4250
+P 8550 4250
+F 0 "U?" H 8550 3935 50  0000 C CNN
+F 1 "AZDelivery_ACS712" H 8550 4026 50  0000 C CNN
+F 2 "" H 8550 4500 50  0001 C CNN
+F 3 "" H 8550 4500 50  0001 C CNN
+	1    8550 4250
 	-1   0    0    1   
 $EndComp
 Text GLabel 1000 1000 0    50   Input ~ 0
@@ -236,44 +181,14 @@ Wire Wire Line
 Wire Wire Line
 	2150 3450 2150 3600
 Connection ~ 2000 2750
-$Comp
-L CarDuino:Joying U?
-U 1 1 5D242C5F
-P 9750 5000
-F 0 "U?" H 10278 5046 50  0000 L CNN
-F 1 "Joying" H 10278 4955 50  0000 L CNN
-F 2 "" H 9750 5550 50  0001 C CNN
-F 3 "" H 9750 5550 50  0001 C CNN
-	1    9750 5000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9350 5450 9350 6000
-Wire Wire Line
-	9350 4300 9150 4300
-Wire Wire Line
-	9150 4200 9350 4200
-$Comp
-L relay-2x:RELAY-2X K?
-U 2 1 5D260317
-P 9650 2400
-F 0 "K?" H 10016 2480 30  0000 L CNN
-F 1 "RELAY-2X" H 10016 2420 30  0001 L CNN
-F 2 "" H 9650 2400 60  0000 C CNN
-F 3 "" H 9650 2400 60  0000 C CNN
-	2    9650 2400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9800 2550 9800 2850
 Wire Wire Line
 	9800 2850 9450 2850
 Wire Wire Line
 	9450 2850 9450 4550
 Text GLabel 10300 6000 2    50   Input ~ 0
 0V
-Wire Wire Line
-	5500 4600 4600 4600
 Wire Wire Line
 	4500 5200 4500 6000
 Wire Wire Line
@@ -316,17 +231,11 @@ Wire Wire Line
 Wire Wire Line
 	4700 2500 4700 3550
 Wire Wire Line
-	5500 4600 5500 4750
-Wire Wire Line
-	4600 4600 4600 4450
-Wire Wire Line
 	4800 4450 4800 4500
-Wire Wire Line
-	10050 4500 10050 4550
 Text Notes 1500 6500 0    118  ~ 0
 K1 - Standard 12V KFZ-Relais
 Text Notes 1500 6750 0    118  ~ 0
-K2, K3 & K4 - SainSmart 4 Kanal RelaisModul 5V
+K2 - K5 - SainSmart 4 Kanal RelaisModul 5V
 $Comp
 L Device:Fuse F1
 U 1 1 5D1F9C61
@@ -343,8 +252,6 @@ Wire Wire Line
 Wire Wire Line
 	1500 4750 1500 1200
 Connection ~ 1500 1200
-Wire Wire Line
-	9800 2150 9800 1200
 Wire Wire Line
 	1000 1000 1100 1000
 $Comp
@@ -375,7 +282,7 @@ F 3 "" H 4400 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8150 4250 5000 4250
+	8200 4250 5000 4250
 Wire Wire Line
 	5000 3500 4800 3500
 $Comp
@@ -407,8 +314,6 @@ Wire Wire Line
 	2800 4900 3000 4900
 Wire Wire Line
 	2800 5100 3000 5100
-Wire Wire Line
-	4000 1400 10000 1400
 $Comp
 L Switch:SW_Push Mute
 U 1 1 5D1C8181
@@ -509,11 +414,9 @@ F 3 "~" H 8550 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5100 4500 10050 4500
-Wire Wire Line
 	9350 4300 9350 4550
 Wire Wire Line
-	9350 4200 9350 1000
+	9350 4200 9350 2550
 Wire Wire Line
 	5000 3500 5000 4250
 Wire Wire Line
@@ -651,21 +554,11 @@ Wire Wire Line
 	3000 6000 3500 6000
 Wire Wire Line
 	4500 6000 5500 6000
-Connection ~ 9350 1000
-Wire Wire Line
-	9350 1000 10250 1000
 Connection ~ 9350 6000
 Wire Wire Line
 	9350 6000 10300 6000
-Connection ~ 9800 1200
 Wire Wire Line
-	9800 1200 10250 1200
-Wire Wire Line
-	1500 1200 9800 1200
-Wire Wire Line
-	5500 6000 9350 6000
-Wire Wire Line
-	2000 1000 9350 1000
+	5500 6000 6500 6000
 Text Label 4700 2500 0    50   ~ 0
 LFB_OUT1
 Text Label 4700 2400 0    50   ~ 0
@@ -678,4 +571,78 @@ Text Label 4700 2100 0    50   ~ 0
 LFB_IN2
 Text Label 4700 2200 0    50   ~ 0
 LFB_IN3
+$Comp
+L CarDuino:Joying U?
+U 1 1 5D242C5F
+P 9750 5000
+F 0 "U?" H 10278 5046 50  0000 L CNN
+F 1 "Joying" H 10278 4955 50  0000 L CNN
+F 2 "" H 9750 5550 50  0001 C CNN
+F 3 "" H 9750 5550 50  0001 C CNN
+	1    9750 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 4500 10050 4550
+Wire Wire Line
+	4800 4500 10050 4500
+Wire Wire Line
+	8900 4200 9350 4200
+Wire Wire Line
+	8900 4300 9350 4300
+Wire Wire Line
+	4000 1400 10250 1400
+Wire Wire Line
+	4600 4700 5500 4700
+Wire Wire Line
+	4600 4450 4600 4700
+Wire Wire Line
+	5500 4700 5500 4750
+$Comp
+L relay-2x:RELAY-2X K5
+U 1 1 5D2078B4
+P 6850 5000
+F 0 "K5" H 6728 5025 30  0000 L CNN
+F 1 "RELAY-2X" H 6728 4995 30  0001 L CNN
+F 2 "" H 6850 5000 60  0000 C CNN
+F 3 "" H 6850 5000 60  0000 C CNN
+	1    6850 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L relay-2x:RELAY-2X K5
+U 2 1 5D208ABA
+P 9200 2400
+F 0 "K5" H 9566 2450 30  0000 L CNN
+F 1 "RELAY-2X" H 9566 2420 30  0001 L CNN
+F 2 "" H 9200 2400 60  0000 C CNN
+F 3 "" H 9200 2400 60  0000 C CNN
+	2    9200 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 2150 9500 1000
+Wire Wire Line
+	4700 4450 4700 4600
+Wire Wire Line
+	4700 4600 6500 4600
+Wire Wire Line
+	6500 4600 6500 4750
+Wire Wire Line
+	6500 5200 6500 6000
+Connection ~ 6500 6000
+Wire Wire Line
+	6500 6000 9350 6000
+Connection ~ 9500 1000
+Wire Wire Line
+	9500 1000 10250 1000
+Wire Wire Line
+	2000 1000 9500 1000
+Wire Wire Line
+	1500 1200 9800 1200
+Wire Wire Line
+	9800 1200 9800 2850
+Connection ~ 9800 1200
+Wire Wire Line
+	9800 1200 10250 1200
 $EndSCHEMATC
