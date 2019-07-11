@@ -13,6 +13,11 @@
 #define PIN_K3          24
 #define PIN_K4          25
 
+// Ansteuerung Digitalpotentiometer
+#define PIN_DIGIPOT_CS  0
+#define PIN_DIGIPOT_INC 0
+#define PIN_DIGIPOT_UD  0
+
 // Signale Lenkradfernbedienung
 #define PIN_SWC_IN1     55
 #define PIN_SWC_IN2     56
@@ -28,4 +33,3 @@
 void InitIO(void);
 
 #endif
-

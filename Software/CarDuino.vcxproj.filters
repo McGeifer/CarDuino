@@ -27,12 +27,18 @@
     <ClInclude Include="gpio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="digital_poti.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="communication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="gpio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="digital_poti.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

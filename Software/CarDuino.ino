@@ -26,13 +26,12 @@
     SOFTWARE.
 */
 
+#include "digital_poti.h"
 #include "communication.h"
 #include "gpio.h"
 #include "string.h"
 
 #define DEBUG
-#define ANALOG_VAL_MULTIPLIER 
-#define ANALOG_OUT_MUTE (1*ANALOG_VAL)
 
 const char CARDUINO_WELCOME[] = "CarDuino";
 const char CARDUINO_VERSION[] = "Version: 0.1";
@@ -118,7 +117,8 @@ void ReadHuPowerConsumption(void)
 
 void HandleSteeringWheelControl(void)
 {
-    
+    // Test für Digitalpotentiometer
+
 }
 
 void SetCarDataLast(void)

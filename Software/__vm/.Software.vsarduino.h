@@ -20,7 +20,7 @@
 #define ARDUINO 10807
 #define F_CPU 120000000
 #define USB_SERIAL
-#define LAYOUT_US_ENGLISH
+#define LAYOUT_GERMAN
 #define __cplusplus 201103L
 #define __arm__
 #define __ARM__

@@ -16,4 +16,3 @@
 void InitCommunication(void);
 
 #endif
-

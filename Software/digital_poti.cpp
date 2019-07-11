@@ -1,6 +1,6 @@
 /*
-    Name:           communication.cpp
-    Created:	    03.07.2019 18:54:023
+    Name:           digital_poti.cpp
+    Created:	    11.07.2019 21:01:537
     Author:         J.Schiller
 
     MIT License
@@ -26,9 +26,6 @@
     SOFTWARE.
 */
 
-#include "communication.h"
+#include "digital_poti.h"
 
-void InitCommunication(void)
-{
 
-}
