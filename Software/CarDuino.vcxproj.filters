@@ -15,30 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="CarDuino.ino" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="__vm\.Software.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="communication.h">
+    <ClInclude Include="__vm\.src.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="gpio.h">
+    <ClInclude Include="src\communication.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="digital_poti.h">
+    <ClInclude Include="src\digital_poti.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gpio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="communication.cpp">
+    <None Include="src\CarDuino.ino" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\communication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="gpio.cpp">
+    <ClCompile Include="src\digital_poti.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="digital_poti.cpp">
+    <ClCompile Include="src\gpio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
