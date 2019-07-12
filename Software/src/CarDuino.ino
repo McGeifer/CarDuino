@@ -30,6 +30,7 @@
 #include "communication.h"
 #include "gpio.h"
 #include "string.h"
+#include "lib/Arduino-X9C/src/X9C.h"
 
 #define DEBUG
 
@@ -60,6 +61,7 @@ enum ERemoteControlStatus
 
 int16_t g_car_data[SIZE_OF_CAR_DATA] = {};
 int16_t g_car_data_last[SIZE_OF_CAR_DATA] = {};
+X9C digiPot;
 
 void setup()
 {
@@ -84,6 +86,21 @@ void loop()
     //HeadUnit();
     //Display();
     SetCarDataLast();
+
+    // Teste Digitalpotentiometer
+    digiPot.begin(PIN_DIGIPOT_CS, PIN_DIGIPOT_INC, PIN_DIGIPOT_UD);
+
+    digiPot.setPotMax(false);
+    delay(5000);
+    digiPot.setPotMin(false);
+    delay(5000);
+
+    for (size_t i = 0; i < 99; i++)
+    {
+        digiPot.trimPot(1, X9C_UP, false);
+        delayMicroseconds(1);
+    }
+
 }
 
 void ReadSteeringWheelControl(void)
