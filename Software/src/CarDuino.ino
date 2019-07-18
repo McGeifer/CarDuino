@@ -26,12 +26,62 @@
     SOFTWARE.
 */
 
-#include "digital_poti.h"
-#include "communication.h"
-#include "gpio.h"
+#include <SPI.h>
+#include <MCP41_Simple.h>
 #include "string.h"
 #include "lib/Arduino-X9C/src/X9C.h"
 
+/*
+ * Kommunikation
+ */
+#define CAR_SERIAL_PORT             Serial1
+#define CAR_SERIAL_BEGIN(arg)       (CAR_SERIAL_PORT.begin(arg))
+#define CAR_SERIAL_PRINT_MSG(arg)   (CAR_SERIAL_PORT.println(arg))
+
+#define DIGIPOT_SPI                 SPI
+
+/*
+ * I/O
+ */
+#define PIN_K3          24  /* Relais K3 */
+#define PIN_K4          25  /* Relais K4 */
+#define PIN_K5          25  /* Relais K4 */
+
+#define PIN_SWC_IN1     2   /* SWC Eingang 1 - PIN 2 - BU */
+#define PIN_SWC_IN2     3   /* SWC Eingang 2 - PIN 3 - YE */
+#define PIN_SWC_IN3     4   /* SWC Eingang 3 - PIN 4 - GN */
+#define PIN_SWC_OUT1    5   /* SWC Ausgang 1 - PIN 1 - BN */
+#define PIN_SWC_OUT2    6   /* SWC Ausgang 2 - PIN 5 - RD */
+#define PIN_SWC_OUT3    7   /* SWC Ausgang 3 - PIN 6 - BK */
+
+#define PIN_DIGIPOT_CS 10   /* chip select für digital Potentiometer */
+
+/* 
+ * Signale HU
+ */
+#define PIN_HU_CURRENT  0   /* Stromverbrauch HU  */
+#define PIN_HU_KEY1     0   /* Widerstand für */
+
+/* 
+ * Digital Potentiometer
+ */
+#define DIGI_POT_WIPER_RESISTANCE               125     /* Siehe Datenblatt */
+#define DIGI_POT_MAX_RESISTANCE                 100000  /* MCP41100 = 100k */
+
+#define DIGI_POT_RESISTANCE_MUTE                10000
+#define DIGI_POT_RESISTANCE_SOURCE_UP           20000
+#define DIGI_POT_RESISTANCE_SOURCE_DOWN         30000
+#define DIGI_POT_RESISTANCE_VOl_UP              40000
+#define DIGI_POT_RESISTANCE_VOl_DOWN            50000
+#define DIGI_POT_RESISTANCE_SKIP                60000
+#define DIGI_POT_RESISTANCE_ROTARY_SWITCH_UP    70000
+#define DIGI_POZ_RESISTANCE_ROTARY_SWITCH_DOWN  80000
+#define DIGI_POZ_RESISTANCE_CUSTOM_1            90000
+
+
+/*
+ * Sonstiges
+ */
 #define DEBUG
 
 const char CARDUINO_WELCOME[] = "CarDuino";
@@ -41,27 +91,22 @@ const char CARDUINO_AUTHOR[] = "Author:  J.Schiller";
 
 enum ECarData
 {
-    SWC_OUT1_IN1,
-    SWC_OUT1_IN2,
-    SWC_OUT1_IN3,
-    SWC_OUT2_IN1,
-    SWC_OUT2_IN2,
-    SWC_OUT2_IN3,
-    SWC_OUT3_IN1,
-    SWC_OUT3_IN2,
-    SWC_OUT3_IN3,
-    HU_POWER_CONSUMPTION,
-    SIZE_OF_CAR_DATA
+    SWC_MUTE,
+    SWC_SOURCE_UP,
+    SWC_SOURCE_DOWN,
+    SWC_VOl_UP,
+    SWC_VOl_DOWN,
+    SWC_SKIP,
+    SWC_ROTARY_SWITCH_1,
+    SWC_ROTARY_SWITCH_2,
+    SWC_ROTARY_SWITCH_3,    /* Bis hier hin nicht ändern oder NumberOfKeysPressed() anpassen */
+    HU_CURRENT_CONSUMPTION,
+    SIZE_OF_CAR_DATA        /* immer letztes Element! */
 };
 
-enum ERemoteControlStatus
-{
-    
-};
-
-int16_t g_car_data[SIZE_OF_CAR_DATA] = {};
-int16_t g_car_data_last[SIZE_OF_CAR_DATA] = {};
-X9C digiPot;
+int16_t g_car_data[SIZE_OF_CAR_DATA] = {};          /* alle wichtigen Werte/ Zustände des Systems */
+int16_t g_car_data_last[SIZE_OF_CAR_DATA] = {};     /* Kopie von g_car_data zur Zustandswechsel Erkennung */
+MCP41_Simple digiPot(DIGIPOT_SPI);
 
 void setup()
 {
@@ -74,8 +119,9 @@ void setup()
     CAR_SERIAL_PRINT_MSG("Verbindung hergestellt...");
     CAR_SERIAL_PRINT_MSG();
 
-    InitIO();
-    InitCommunication();
+    InitIGPIO();
+    digiPot.begin(PIN_DIGIPOT_CS);
+    digiPot.shutdownMode();             /* tri state Modus sicherstellen */
 }
 
 void loop()
@@ -87,57 +133,147 @@ void loop()
     //Display();
     SetCarDataLast();
 
-    // Teste Digitalpotentiometer
-    digiPot.begin(PIN_DIGIPOT_CS, PIN_DIGIPOT_INC, PIN_DIGIPOT_UD);
-
-    digiPot.setPotMax(false);
-    delay(5000);
-    digiPot.setPotMin(false);
-    delay(5000);
-
-    for (size_t i = 0; i < 99; i++)
-    {
-        digiPot.trimPot(1, X9C_UP, false);
-        delayMicroseconds(1);
-    }
 
 }
 
+/*
+ * Hier sollte etwas stehen 
+ */
+void InitIGPIO(void)
+{
+    /* Eingänge */
+    pinMode(PIN_SWC_IN1, INPUT);
+    pinMode(PIN_SWC_IN2, INPUT);
+    pinMode(PIN_SWC_IN3, INPUT);
+
+    /* Ausgänge */
+    pinMode(PIN_K3, OUTPUT);
+    digitalWrite(PIN_K3, LOW);
+    pinMode(PIN_K4, OUTPUT);
+    digitalWrite(PIN_K4, LOW);
+    pinMode(PIN_SWC_OUT1, OUTPUT);
+    digitalWrite(PIN_SWC_OUT1, LOW);
+    pinMode(PIN_SWC_OUT2, OUTPUT);
+    digitalWrite(PIN_SWC_OUT2, LOW);
+    pinMode(PIN_SWC_OUT3, OUTPUT);
+    digitalWrite(PIN_SWC_OUT3, LOW);
+}
+
+/*
+ * Hier sollte etwas stehen
+ */
 void ReadSteeringWheelControl(void)
 {
     /* Zustand 1 - Mute, Source+ oder Source- */
     digitalWrite(PIN_SWC_OUT1, HIGH);
-    g_car_data[SWC_OUT1_IN1] = digitalRead(PIN_SWC_IN1);
-    g_car_data[SWC_OUT1_IN2] = digitalRead(PIN_SWC_IN2);
-    g_car_data[SWC_OUT1_IN3] = digitalRead(PIN_SWC_IN3);
+    g_car_data[SWC_MUTE] = digitalRead(PIN_SWC_IN1);
+    g_car_data[SWC_SOURCE_UP] = digitalRead(PIN_SWC_IN2);
+    g_car_data[SWC_SOURCE_DOWN] = digitalRead(PIN_SWC_IN3);
     digitalWrite(PIN_SWC_OUT1, LOW);
-
+    
     /* Zustand 2 - Vol-, Vol+ oder Skip */
     digitalWrite(PIN_SWC_OUT2, HIGH);
-    g_car_data[SWC_OUT2_IN1] = digitalRead(PIN_SWC_IN1);
-    g_car_data[SWC_OUT2_IN2] = digitalRead(PIN_SWC_IN2);
-    g_car_data[SWC_OUT2_IN3] = digitalRead(PIN_SWC_IN3);
+    g_car_data[SWC_VOl_UP] = digitalRead(PIN_SWC_IN1);
+    g_car_data[SWC_VOl_DOWN] = digitalRead(PIN_SWC_IN2);
+    g_car_data[SWC_SKIP] = digitalRead(PIN_SWC_IN3);
     digitalWrite(PIN_SWC_OUT2, LOW);
 
     /* Zustand 3 - Drehknopf */
     digitalWrite(PIN_SWC_OUT3, HIGH);
-    g_car_data[SWC_OUT3_IN1] = digitalRead(PIN_SWC_IN1);
-    g_car_data[SWC_OUT3_IN2] = digitalRead(PIN_SWC_IN2);
-    g_car_data[SWC_OUT3_IN3] = digitalRead(PIN_SWC_IN3);
+    g_car_data[SWC_ROTARY_SWITCH_1] = digitalRead(PIN_SWC_IN1);
+    g_car_data[SWC_ROTARY_SWITCH_1] = digitalRead(PIN_SWC_IN2);
+    g_car_data[SWC_ROTARY_SWITCH_3] = digitalRead(PIN_SWC_IN3);
     digitalWrite(PIN_SWC_OUT3, LOW);
 }
 
+/*
+ * Hier sollte etwas stehen
+ */
 void ReadHuPowerConsumption(void)
 {
-    g_car_data[HU_POWER_CONSUMPTION] = analogRead(PIN_HU_CURRENT);
+    g_car_data[HU_CURRENT_CONSUMPTION] = analogRead(PIN_HU_CURRENT);
 }
 
+/*
+ * Hier sollte etwas stehen
+ */
 void HandleSteeringWheelControl(void)
 {
-    // Test für Digitalpotentiometer
+    uint8_t _number_of_keys_pressed = NumberOfKeysPressed();
 
+    if (_number_of_keys_pressed > 0 && _number_of_keys_pressed <= 2)
+    {
+        if (_number_of_keys_pressed == 1)
+        {
+            if (g_car_data[SWC_MUTE])
+            {
+                digiPot.setWiper(((DIGI_POT_RESISTANCE_MUTE - DIGI_POT_WIPER_RESISTANCE) / DIGI_POT_MAX_RESISTANCE) * 255);
+                return;
+            }
+
+            if (g_car_data[SWC_SOURCE_UP])
+            {
+                digiPot.setWiper(((DIGI_POT_RESISTANCE_SOURCE_UP - DIGI_POT_WIPER_RESISTANCE) / DIGI_POT_MAX_RESISTANCE) * 255);
+                return;
+            }
+
+            if (g_car_data[SWC_SOURCE_DOWN])
+            {
+                digiPot.setWiper(((DIGI_POT_RESISTANCE_SOURCE_DOWN - DIGI_POT_WIPER_RESISTANCE) / DIGI_POT_MAX_RESISTANCE) * 255);
+                return;
+            }
+
+            if (g_car_data[SWC_VOl_UP])
+            {
+                digiPot.setWiper(((DIGI_POT_RESISTANCE_VOl_UP - DIGI_POT_WIPER_RESISTANCE) / DIGI_POT_MAX_RESISTANCE) * 255);
+                return;
+            }
+
+            if (g_car_data[SWC_VOl_DOWN])
+            {
+                digiPot.setWiper(((DIGI_POT_RESISTANCE_VOl_DOWN - DIGI_POT_WIPER_RESISTANCE) / DIGI_POT_MAX_RESISTANCE) * 255);
+                return;
+            }
+
+            if (g_car_data[SWC_SKIP])
+            {
+                digiPot.setWiper(((DIGI_POT_RESISTANCE_SKIP - DIGI_POT_WIPER_RESISTANCE) / DIGI_POT_MAX_RESISTANCE) * 255);
+                return;
+            }
+
+            if (g_car_data[SWC_VOl_DOWN])
+            {
+                digiPot.setWiper(((DIGI_POT_RESISTANCE_VOl_DOWN - DIGI_POT_WIPER_RESISTANCE) / DIGI_POT_MAX_RESISTANCE) * 255);
+                return;
+            }
+
+
+        }
+    }
+    else
+    {
+        digiPot.shutdownMode();
+    }
 }
 
+/*
+ * Ermittelt die Anzahl betätigter Tasten und gibt diese zurück.
+ */
+uint8_t NumberOfKeysPressed(void)
+{
+    uint8_t x = 0;
+
+    for (size_t i = 0; i = SWC_ROTARY_SWITCH_3; i++)
+    {
+        x += g_car_data[i];
+    }
+    
+    return x;
+}
+
+/*
+ * Hier sollte etwas stehen
+ */
 void SetCarDataLast(void)
 {
     for (size_t i = 0; i < SIZE_OF_CAR_DATA; i++)

@@ -1,3 +1,6 @@
 [submodule "Software/src/lib/Arduino-X9C"]
 	path = Software/src/lib/Arduino-X9C
 	url = https://github.com/philbowles/Arduino-X9C.git
+[submodule "Software/src/lib/MCP41_Simple"]
+	path = Software/src/lib/MCP41_Simple
+	url = https://github.com/sleemanj/MCP41_Simple.git
